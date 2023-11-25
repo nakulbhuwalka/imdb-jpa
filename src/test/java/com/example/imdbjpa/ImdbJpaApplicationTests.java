@@ -1,0 +1,13 @@
+package com.example.imdbjpa;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ImdbJpaApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

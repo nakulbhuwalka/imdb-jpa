@@ -1,0 +1,1 @@
+create table title_basics (end_year integer not null, is_adult boolean not null, start_year integer not null, runtime_minutes bigint not null, genres varchar(255), original_title varchar(255), primary_title varchar(255), tconst varchar(255) not null, title_type varchar(255), primary key (tconst));
