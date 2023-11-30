@@ -11,11 +11,41 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
 
 public class DataReader {
 
-    private static Path path = Paths.get("/home/nakul/Downloads/imdb");
+    private static Path path = Paths.get("/home/nakul/imdb");
+
+    public static int getInt(String s)
+    {
+        if(s.equals("\\N"))
+        {
+            return 0;
+        }
+        else
+        {
+            return Integer.valueOf(s.trim());
+        }
+    }
+        public static String getStr(String s)
+    {
+        if(s.equals("\\N"))
+        {
+            return null;
+        }
+        else
+        {
+            return s.trim();
+        }
+    }
+
+    public static BufferedReader getReader(String fileName) throws FileNotFoundException, IOException
+    {
+     
+        GZIPInputStream gis = new GZIPInputStream(new FileInputStream(path.resolve(fileName).toFile()));
+        BufferedReader bis = new BufferedReader(new InputStreamReader(gis));
+        return  bis;
+    }
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
         File[] files = path.toFile().listFiles();
@@ -60,9 +90,7 @@ public class DataReader {
 
             System.out.println(builder);
             System.out.println(max);
-            
-
-        }
+         }
 
     }
 

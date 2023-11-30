@@ -1,13 +1,18 @@
 package com.example.imdbjpa.entities;
 
+import org.springframework.data.domain.Persistable;
+import org.springframework.lang.Nullable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
 @Data
-public class TitleBasics {
+@Builder
+public class TitleBasics extends AbstractEntity<String> {
 
     @Id
     private String tconst;
@@ -21,4 +26,11 @@ public class TitleBasics {
     private int endYear;
     private long runtimeMinutes;
     private String genres;
+
+    @Override
+    @Nullable
+    public String getId() {
+       return getTconst();
+    }
+
 }
