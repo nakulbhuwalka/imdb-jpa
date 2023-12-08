@@ -1,6 +1,5 @@
 package com.example.imdbjpa.entities;
 
-import org.springframework.data.domain.Persistable;
 import org.springframework.lang.Nullable;
 
 import jakarta.persistence.Column;
@@ -8,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Data;
+
 
 @Entity
 @Data

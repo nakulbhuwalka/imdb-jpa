@@ -1,8 +1,6 @@
-package com.example.imdbjpa;
+package com.example.imdbjpa.entities;
 
 import org.springframework.lang.Nullable;
-
-import com.example.imdbjpa.entities.AbstractEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
