@@ -16,6 +16,7 @@ import lombok.Data;
 @Builder
 public class TitleCrew extends AbstractEntity<String> {
 
+
 	private String tconst ;
 	private String nconst ;
 	private String type ;

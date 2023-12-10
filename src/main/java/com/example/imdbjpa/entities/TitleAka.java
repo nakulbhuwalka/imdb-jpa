@@ -5,6 +5,7 @@ import com.example.imdbjpa.DataReader;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,9 +16,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity
+@IdClass(TitleAkaId.class)
 public class TitleAka {
 	@Id
 	private String titleId;
+	@Id
 	private int ordering;
 	@Column(length = 1024)
 	private String title;
